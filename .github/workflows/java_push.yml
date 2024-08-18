@@ -43,10 +43,11 @@ jobs:
       run: java Hello
 
   print_variable:
+  
     runs-on: ubuntu-latest
   
     steps:
-    - name: Print Greeting
+    - name: Print STATUS
       env:
-        GREETING: "Hello, GitHub Actions"
-      run: echo $GREETING
+        GREETING: "Hello, System running in full capacity."
+      run: echo $STATUS
