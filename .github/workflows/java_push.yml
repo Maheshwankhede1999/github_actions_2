@@ -41,3 +41,12 @@ jobs:
         name: Hello-class
     - name: Run Java Program
       run: java Hello
+
+  print_variable:
+    runs-on: ubuntu-latest
+  
+    steps:
+    - name: Print Greeting
+      env:
+        GREETING: "Hello, GitHub Actions"
+      run: echo $GREETING
