@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-
 jobs:
   compile:
 
@@ -19,12 +18,14 @@ jobs:
       run: javac Hello.java
     - name: Save Class File
       run: echo "Compiled Hello.class"
+    - name: Upload Class File
       uses: actions/upload-artifact@v3
       with:
         name: Hello-class
         path: Hello.class
 
   run:
+
     runs-on: ubuntu-latest
 
     container:
@@ -40,4 +41,3 @@ jobs:
         name: Hello-class
     - name: Run Java Program
       run: java Hello
-
